@@ -238,9 +238,12 @@ class VideoEditorController extends ChangeNotifier {
 
   void _videoListener() {
     final position = videoPosition;
-    if (position < _trimStart || position > _trimEnd) {
+    if (position < _trimStart) {
       _video.seekTo(_trimStart);
     }
+    // if (position < _trimStart || position > _trimEnd) {
+    //   _video.seekTo(_trimStart);
+    // }
   }
 
   //----------//
